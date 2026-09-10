@@ -8,7 +8,9 @@ public class Item : MonoBehaviour
         Polvilho,
         Queijo,
         Massa,
-        Forma
+        Forma,
+        PaoDeQueijo,
+        Plate
     }
 
     [Header("Identificação do Item")]

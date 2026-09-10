@@ -12,6 +12,11 @@ public class BakingTray : MonoBehaviour
         return dough != null;
     }
 
+    public Item GetDough()
+    {
+        return dough;
+    }
+
     public void AddDough(Item newDough)
     {
         if (newDough == null)
@@ -29,5 +34,10 @@ public class BakingTray : MonoBehaviour
         dough.transform.localPosition = Vector3.zero;
 
         Debug.Log("[Forma] Massa colocada na forma!");
+    }
+
+    public void RemoveDough()
+    {
+        dough = null;
     }
 }

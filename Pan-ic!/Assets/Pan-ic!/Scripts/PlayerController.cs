@@ -50,6 +50,9 @@ public class PlayerController : MonoBehaviour
         MixingBowl bowlFound = null;
         BakingTray trayFound = null;
         Item itemFound = null;
+        Oven ovenFound = null;
+        Plate plateFound = null;
+        TrashBin trashFound = null;
 
         foreach (Collider2D hit in hits)
         {
@@ -83,6 +86,27 @@ public class PlayerController : MonoBehaviour
             if (item != null)
             {
                 itemFound = item;
+            }
+
+            Oven oven = hit.GetComponent<Oven>();
+
+            if (oven != null)
+            {
+                ovenFound = oven;
+            }
+
+            Plate plate = hit.GetComponent<Plate>();
+
+            if (plate != null)
+            {
+                plateFound = plate;
+            }
+
+            TrashBin trash = hit.GetComponent<TrashBin>();
+
+            if (trash != null)
+            {
+                trashFound = trash;
             }
         }
 
@@ -166,6 +190,67 @@ public class PlayerController : MonoBehaviour
             print("Esse item não pode ser colocado na tigela!");
             return;
         }
+
+        // ==========================================
+        // FORMA → FORNO
+        // ==========================================
+
+        if (ovenFound != null &&
+            currentItem != null &&
+            currentItem.itemType == Item.ItemType.Forma)
+        {
+            BakingTray tray = currentItem.GetComponent<BakingTray>();
+
+            if (tray != null)
+            {
+                print("Colocando a forma no forno...");
+
+                ovenFound.AddTray(tray);
+
+                currentItem = null;
+
+                return;
+            }
+        }
+
+        // ==========================================
+        // PÃO DE QUEIJO → PRATO
+        // ==========================================
+
+        if (plateFound != null)
+        {
+            if (currentItem.itemType == Item.ItemType.PaoDeQueijo)
+            {
+                if (!plateFound.HasFood())
+                {
+                    print("Colocando pão de queijo no prato...");
+
+                    plateFound.AddFood(currentItem);
+                    currentItem = null;
+
+                    return;
+                }
+            }
+
+            print("O prato só aceita pão de queijo!");
+            return;
+        }
+
+        // ==========================================
+        // ITEM → LIXO
+        // ==========================================
+
+        if (trashFound != null && currentItem != null)
+        {
+            print("Jogando item no lixo...");
+
+            trashFound.AddItem(currentItem);
+
+            currentItem = null;
+
+            return;
+        }
+
 
         // ==========================================
         // SOLTAR ITEM
