@@ -164,6 +164,9 @@ public class PlayerController : MonoBehaviour
             // A forma nunca pode entrar na tigela
             if (currentItem.itemType == Item.ItemType.Forma)
             {
+                AudioManager.Instance.PlaySFX(
+                AudioManager.Instance.errorSound
+                );
                 print("A forma não pode ser colocada na tigela!");
                 return;
             }
@@ -171,6 +174,9 @@ public class PlayerController : MonoBehaviour
             // A massa também não volta para a tigela
             if (currentItem.itemType == Item.ItemType.Massa)
             {
+                AudioManager.Instance.PlaySFX(
+                AudioManager.Instance.errorSound
+                );
                 print("Essa massa já está pronta para ir para a forma!");
                 return;
             }
@@ -179,6 +185,9 @@ public class PlayerController : MonoBehaviour
             if (currentItem.itemType == Item.ItemType.Polvilho ||
                 currentItem.itemType == Item.ItemType.Queijo)
             {
+                AudioManager.Instance.PlaySFX(
+                AudioManager.Instance.placeSound
+                );
                 print("Colocando " + currentItem.itemName + " na tigela...");
 
                 bowlFound.AddIngredient(currentItem);

@@ -32,7 +32,9 @@ public class BakingTray : MonoBehaviour
 
         dough.transform.SetParent(doughPoint);
         dough.transform.localPosition = Vector3.zero;
-
+        AudioManager.Instance.PlaySFX(
+        AudioManager.Instance.placeSound
+        );
         Debug.Log("[Forma] Massa colocada na forma!");
     }
 

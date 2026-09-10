@@ -33,6 +33,9 @@ public class Item : MonoBehaviour
 
     public void OnPickUp(Transform holdPoint)
     {
+        AudioManager.Instance.PlaySFX(
+        AudioManager.Instance.pickupSound
+        );
         transform.SetParent(holdPoint);
         transform.localPosition = Vector3.zero;
 
@@ -54,6 +57,9 @@ public class Item : MonoBehaviour
 
     public void OnDrop(Vector3 dropPosition)
     {
+        AudioManager.Instance.PlaySFX(
+        AudioManager.Instance.placeSound
+        );
         transform.SetParent(null);
         transform.position = dropPosition;
 

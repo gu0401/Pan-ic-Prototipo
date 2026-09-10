@@ -35,6 +35,9 @@ public class Plate : MonoBehaviour
         food.transform.SetParent(foodPoint);
         food.transform.localPosition = Vector3.zero;
 
+        AudioManager.Instance.PlaySFX(
+        AudioManager.Instance.placeSound
+        );
         Debug.Log("[Prato] Pão de queijo colocado no prato!");
     }
 }

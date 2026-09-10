@@ -31,6 +31,9 @@ public class ButtonHighlight : MonoBehaviour, ISelectHandler, IDeselectHandler
     // Chamado automaticamente pelo EventSystem quando o botão é SELECIONADO
     public void OnSelect(BaseEventData eventData)
     {
+        AudioManager.Instance.PlaySFX(
+        AudioManager.Instance.buttonSound
+        );
         if (outlineComponent != null)
         {
             outlineComponent.enabled = true;

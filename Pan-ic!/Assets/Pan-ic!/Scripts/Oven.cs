@@ -37,6 +37,9 @@ public class Oven : MonoBehaviour
         tray.transform.SetParent(trayPoint);
         tray.transform.localPosition = Vector3.zero;
 
+        AudioManager.Instance.PlaySFX(
+        AudioManager.Instance.placeSound
+        );
         Debug.Log("[Forno] Forma colocada no forno!");
 
         StartCoroutine(Bake());
@@ -51,7 +54,9 @@ public class Oven : MonoBehaviour
         yield return new WaitForSeconds(cookingTime);
 
         Debug.Log("[Forno] Pão de queijo pronto!");
-
+        AudioManager.Instance.PlaySFX(
+        AudioManager.Instance.ovenSound
+        );
         if (currentTray != null)
         {
             Item dough = currentTray.GetDough();

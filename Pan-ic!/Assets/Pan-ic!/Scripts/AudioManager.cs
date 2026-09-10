@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip finishedSound;
     public AudioClip trashSound;
     public AudioClip buttonSound;
+    public AudioClip errorSound;
 
     private void Awake()
     {
