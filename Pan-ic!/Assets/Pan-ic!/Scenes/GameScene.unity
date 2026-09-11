@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 96916393}
   - component: {fileID: 96916392}
   - component: {fileID: 96916391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Geladeira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 113517619}
   - component: {fileID: 113517618}
   - component: {fileID: 113517620}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 1- Mesa Restaurante2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +1041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141139822}
   - component: {fileID: 141139821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tapete_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1653,7 +1653,7 @@ GameObject:
   - component: {fileID: 229818346}
   - component: {fileID: 229818345}
   - component: {fileID: 229818347}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 1- Mesa Restaurante1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1781,6 +1781,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.2, y: 4.06}
   m_EdgeRadius: 0
+--- !u!1 &288712523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 288712524}
+  m_Layer: 8
+  m_Name: Waypoint (4)
+  m_TagString: HoldPoint
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &288712524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288712523}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.243962, y: 4.7500405, z: 0}
+  m_LocalScale: {x: 0.3511257, y: 0.3498817, z: 0.32455406}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384539935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &298897982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,7 +2244,7 @@ GameObject:
   - component: {fileID: 384539933}
   - component: {fileID: 384539932}
   - component: {fileID: 384539931}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2233,15 +2264,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlimeThief
   player: {fileID: 385142020}
-  lootPoint: {fileID: 0}
-  escapePoint: {fileID: 0}
+  lootPoint: {fileID: 1907529412}
+  escapePoint: {fileID: 1003546416}
   obstacles:
     serializedVersion: 2
     m_Bits: 1
-  waypoints: []
+  waypoints:
+  - {fileID: 1286038614}
+  - {fileID: 1980914404}
+  - {fileID: 1805793273}
+  - {fileID: 890476057}
+  - {fileID: 288712524}
+  - {fileID: 457235875}
   speed: 2.5
   escapeSpeed: 3
-  detectionRange: 8
+  detectionRange: 4
   stealRange: 1.1
   recoveryRange: 1.5
   cooldown: 3
@@ -2280,7 +2317,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.3
+  m_Radius: 0.50653297
 --- !u!50 &384539933
 Rigidbody2D:
   serializedVersion: 5
@@ -2289,13 +2326,13 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384539930}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.5
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2307,7 +2344,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &384539934
 SpriteRenderer:
   serializedVersion: 3
@@ -2355,7 +2392,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.07066631, g: 1, b: 0.39607844, a: 0.6313726}
@@ -2377,10 +2414,18 @@ Transform:
   m_GameObject: {fileID: 384539930}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8352964, y: -2.6961339, z: 0}
+  m_LocalPosition: {x: 0.14, y: -2.6961339, z: 0}
   m_LocalScale: {x: 0.9243129, y: 0.92759925, z: 0.99998766}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1907529412}
+  - {fileID: 1003546416}
+  - {fileID: 1286038614}
+  - {fileID: 1980914404}
+  - {fileID: 1805793273}
+  - {fileID: 890476057}
+  - {fileID: 288712524}
+  - {fileID: 457235875}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &385142020 stripped
@@ -2531,7 +2576,7 @@ GameObject:
   - component: {fileID: 434796347}
   - component: {fileID: 434796346}
   - component: {fileID: 434796348}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 1- Mesa Restaurante3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2690,6 +2735,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 10075980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &457235874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457235875}
+  m_Layer: 8
+  m_Name: Waypoint (5)
+  m_TagString: HoldPoint
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &457235875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457235874}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.243962, y: 0.16832042, z: 0}
+  m_LocalScale: {x: 0.3511257, y: 0.3498817, z: 0.32455406}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384539935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &467253839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,7 +2776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467253841}
   - component: {fileID: 467253840}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mesa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2904,7 +2980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499535825}
   - component: {fileID: 499535824}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "Balc\xE3o3 - Ao lado da pia"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3089,7 +3165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 556109200}
   - component: {fileID: 556109199}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cenario_Colisoes (7)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -3337,7 +3413,7 @@ GameObject:
   - component: {fileID: 575779007}
   - component: {fileID: 575779006}
   - component: {fileID: 575779008}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3573,7 +3649,7 @@ GameObject:
   - component: {fileID: 662569371}
   - component: {fileID: 662569370}
   - component: {fileID: 662569372}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "Balc\xE3o2 - Direita Cima"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3825,7 +3901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 735366495}
   - component: {fileID: 735366494}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 5_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3918,7 +3994,7 @@ GameObject:
   - component: {fileID: 736911310}
   - component: {fileID: 736911309}
   - component: {fileID: 736911311}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Parede - 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4553,7 +4629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 862263836}
   - component: {fileID: 862263835}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cenario_Colisoes (11)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -4621,6 +4697,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467253841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.053}
+--- !u!1 &890476056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890476057}
+  m_Layer: 8
+  m_Name: Waypoint (3)
+  m_TagString: HoldPoint
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &890476057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890476056}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2611394, y: 4.7500405, z: 0}
+  m_LocalScale: {x: 0.3511257, y: 0.3498817, z: 0.32455406}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384539935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &892137575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4819,7 +4926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936095445}
   - component: {fileID: 936095444}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5069,7 +5176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 973346284}
   - component: {fileID: 973346283}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "Balc\xE3o3 - Ao lado da pia"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5182,6 +5289,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 311570598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1003546415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003546416}
+  m_Layer: 8
+  m_Name: EscapePoint
+  m_TagString: HoldPoint
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1003546416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003546415}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.642956, y: 2.84, z: 0}
+  m_LocalScale: {x: 0.3511257, y: 0.3498817, z: 0.32455406}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384539935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028647897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5193,7 +5331,7 @@ GameObject:
   - component: {fileID: 1028647899}
   - component: {fileID: 1028647898}
   - component: {fileID: 1028647900}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bancada - Esquerda Cima
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5491,7 +5629,7 @@ GameObject:
   - component: {fileID: 1094435158}
   - component: {fileID: 1094435157}
   - component: {fileID: 1094435159}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Parede - 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6601,6 +6739,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 79466176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1286038613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286038614}
+  m_Layer: 8
+  m_Name: Waypoint
+  m_TagString: HoldPoint
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286038614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286038613}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.3909652, y: -0.06885101, z: 0}
+  m_LocalScale: {x: 0.3511257, y: 0.3498817, z: 0.32455406}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384539935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306533884
 GameObject:
   m_ObjectHideFlags: 0
@@ -6912,7 +7081,7 @@ GameObject:
   - component: {fileID: 1345405134}
   - component: {fileID: 1345405133}
   - component: {fileID: 1345405135}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 1- Mesa Restaurante4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7488,7 +7657,7 @@ GameObject:
   - component: {fileID: 1474279860}
   - component: {fileID: 1474279859}
   - component: {fileID: 1474279861}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mesa - Canto - Cozinha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7880,7 +8049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1582350494}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mesas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7922,7 +8091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1584746980}
   - component: {fileID: 1584746979}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cenario_Colisoes (8)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -8745,6 +8914,37 @@ Transform:
   - {fileID: 1312868265}
   m_Father: {fileID: 803477845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1805793272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1805793273}
+  m_Layer: 8
+  m_Name: Waypoint (2)
+  m_TagString: HoldPoint
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1805793273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805793272}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.729323, y: 4.7500405, z: 0}
+  m_LocalScale: {x: 0.3511257, y: 0.3498817, z: 0.32455406}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384539935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846036111
 GameObject:
   m_ObjectHideFlags: 0
@@ -8947,6 +9147,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1907529411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907529412}
+  m_Layer: 8
+  m_Name: HoldPoint
+  m_TagString: HoldPoint
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1907529412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907529411}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
+  m_LocalScale: {x: 0.3511257, y: 0.3498817, z: 0.32455403}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384539935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915107585
 GameObject:
   m_ObjectHideFlags: 0
@@ -8988,7 +9219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916075250}
   - component: {fileID: 1916075249}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 4_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9170,7 +9401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943632544}
   - component: {fileID: 1943632543}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9262,7 +9493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947671149}
   - component: {fileID: 1947671148}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cenario_Colisoes (5)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -9371,7 +9602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969501630}
   - component: {fileID: 1969501629}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mesa Atendimento
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9452,6 +9683,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1980914403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1980914404}
+  m_Layer: 8
+  m_Name: Waypoint (1)
+  m_TagString: HoldPoint
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1980914404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980914403}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.729323, y: -0.06885101, z: 0}
+  m_LocalScale: {x: 0.3511257, y: 0.3498817, z: 0.32455406}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384539935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1991052710
 GameObject:
@@ -9543,7 +9805,7 @@ GameObject:
   - component: {fileID: 2030984809}
   - component: {fileID: 2030984808}
   - component: {fileID: 2030984810}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 1- Mesa Restaurante5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9928,7 +10190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124861163}
   - component: {fileID: 2124861162}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cenario_Colisoes (6)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -10006,7 +10268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129330079}
   - component: {fileID: 2129330078}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
