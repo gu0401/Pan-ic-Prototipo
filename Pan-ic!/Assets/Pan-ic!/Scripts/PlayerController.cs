@@ -40,6 +40,15 @@ public class PlayerController : MonoBehaviour
 
         print("Botão Interagir Pressionado!");
 
+        // Recuperar o ingrediente tem prioridade quando a mao esta vazia.
+        if (currentItem == null)
+        {
+            foreach (Collider2D nearby in Physics2D.OverlapCircleAll(transform.position, 1.5f))
+            {
+                SlimeThief slime = nearby.GetComponentInParent<SlimeThief>();
+                if (slime != null && slime.TryRecover(this)) return;
+            }
+        }
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             holdPoint.position,
             interactRadius,
@@ -316,6 +325,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Transfere o objeto existente e libera a mao do jogador.
+    public bool TryStealIngredient(Transform destination, out Item stolen)
+    {
+        stolen = null;
+        if (destination == null || currentItem == null) return false;
+        if (currentItem.itemType != Item.ItemType.Queijo &&
+            currentItem.itemType != Item.ItemType.Polvilho) return false;
+        stolen = currentItem;
+        currentItem = null;
+        stolen.OnPickUp(destination);
+        return true;
+    }
     public bool HasItemInHand()
     {
         return currentItem != null;

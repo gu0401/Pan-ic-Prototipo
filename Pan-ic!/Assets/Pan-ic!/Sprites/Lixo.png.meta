@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70024ffd96bdc4544a319897a464c6ec
+guid: 0eb1276f0306f1841ad870329c1a980a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3310002292416464744
-    second: image-removebg-preview_0
+      213: 7205018337011936076
+    second: Lixo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: image-removebg-preview_0
+      name: Lixo_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 0
-        width: 342
-        height: 350
+        x: 764
+        y: 292
+        width: 358
+        height: 525
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 867463d3c8d7fed20800000000000000
-      internalID: 3310002292416464744
+      spriteID: c4ba5c1f00e5df360800000000000000
+      internalID: 7205018337011936076
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      image-removebg-preview_0: 3310002292416464744
+      Lixo_0: 7205018337011936076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

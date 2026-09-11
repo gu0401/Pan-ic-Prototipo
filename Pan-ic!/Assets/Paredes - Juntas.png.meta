@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 340db95952ee619439154b314bc4ddcd
+guid: 3338df82b7861164e9d31c94dbdeec2d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7632782568615927282
-    second: cozinha_0
+      213: -3282648056591775318
+    second: Paredes - Juntas_0
+  - first:
+      213: -2878885866486399709
+    second: Paredes - Juntas_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,19 +100,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cozinha_0
+      name: Paredes - Juntas_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 996
-        height: 548
+        x: 938
+        y: 725
+        width: 46
+        height: 355
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2fd55225e471de960800000000000000
-      internalID: 7632782568615927282
+      spriteID: aa988381cf0b172d0800000000000000
+      internalID: -3282648056591775318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paredes - Juntas_1
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 0
+        width: 46
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d7f23be842c08d0800000000000000
+      internalID: -2878885866486399709
       vertices: []
       indices: 
       edges: []
@@ -161,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cozinha_0: 7632782568615927282
+      Paredes - Juntas_0: -3282648056591775318
+      Paredes - Juntas_1: -2878885866486399709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

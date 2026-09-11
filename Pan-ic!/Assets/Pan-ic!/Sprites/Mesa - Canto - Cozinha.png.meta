@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ff2e4713376c9849bf09f11cf5fcedc
+guid: 74c22ca43e20f0e47bf244259afaadb1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2295756315634780376
-    second: fogo_0
+      213: -1496453322046898562
+    second: Mesa - Canto - Cozinha_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fogo_0
+      name: Mesa - Canto - Cozinha_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 482
-        height: 594
+        x: 802
+        y: 176
+        width: 236
+        height: 794
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 827babb5bc5d320e0800000000000000
-      internalID: -2295756315634780376
+      spriteID: e7ef074d1a78b3be0800000000000000
+      internalID: -1496453322046898562
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fogo_0: -2295756315634780376
+      Mesa - Canto - Cozinha_0: -1496453322046898562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
